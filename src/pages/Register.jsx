@@ -19,7 +19,7 @@ const Register = () => {
   }
 
   const register = async (data) => {
-    await axios.post("http://localhost:3001/auth/register", data).then((response) => {
+    await axios.post(`${import.meta.env.VITE_RECIPE_API}/auth/register`, data).then((response) => {
       console.log(response)
     }).catch(err => console.log(err))
   }

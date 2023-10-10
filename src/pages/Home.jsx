@@ -18,7 +18,7 @@ const Home = () => {
 
   const getRecipes = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/recipes")
+      const response = await axios.get(`${import.meta.env.VITE_RECIPE_API}/recipes`)
       console.log(response.data)
 
       setRecipes(response.data)
@@ -29,7 +29,7 @@ const Home = () => {
 
   const getSavedRecipe = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/recipes/savedrecipes/id/${userId}`)
+      const response = await axios.get(`${import.meta.env.VITE_RECIPE_API}/recipes/savedrecipes/id/${userId}`)
       setSavedRecipes(response.data.savedRecipes)
       console.log(response.data.savedRecipes)
     } catch (error) {
@@ -37,9 +37,11 @@ const Home = () => {
     }
   } 
 
+  console.log(`${import.meta.env.VITE_RECIPE_API}`)
+
   const saveRecipe = async (recipeId) => {
     try {
-      const response = await axios.put("http://localhost:3001/recipes", {recipeId, userId}, {
+      const response = await axios.put(`${import.meta.env.VITE_RECIPE_API}/recipes`, {recipeId, userId}, {
         headers: {authorization: cookies.access_token}
       })
       console.log(response)

@@ -8,7 +8,7 @@ const initialState = {
   password: ""
 }
 
-const Register = () => {
+const Login = () => {
 
   const [details, setDetails] = useState(initialState)
   const {username, password} = details
@@ -25,7 +25,7 @@ const Register = () => {
   }
 
   const register = async (data) => {
-    await axios.post("http://localhost:3001/auth/login", data).then((response) => {
+    await axios.post(`${import.meta.env.VITE_RECIPE_API}/auth/login`, data).then((response) => {
 
       console.log(response)
       setCookies("access_token", response.data.token)
@@ -59,4 +59,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Login

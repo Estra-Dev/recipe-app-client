@@ -33,7 +33,7 @@ const Home = () => {
       setSavedRecipes(response.data.savedRecipes)
       console.log(response.data.savedRecipes)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   } 
 
@@ -51,11 +51,7 @@ const Home = () => {
     }
   }
 
-  const isRecipeSaved = (id) =>  {
-    savedRecipes.map((item) => {
-      return item.includes(id)
-    })
-  } 
+  const isRecipeSaved = (id) => savedRecipes.includes(id)
 
   return (
     <div>

@@ -51,7 +51,7 @@ const Home = () => {
     }
   }
 
-  const isRecipeSaved = (id) => savedRecipes.includes(id)
+  // const isRecipeSaved = (id) => savedRecipes.includes(id)
 
   return (
     <div>
@@ -61,7 +61,7 @@ const Home = () => {
           <div key={recipe._id} className=" flex flex-col items-center gap-3 w-[100%] md:w-[40%] mx-auto p-3 px-5 pt-6 bg-white border-b-2 border-solid">
             <div className=" w-[100%] flex flex-col items-start md:justify-between md:items-center md:flex-row gap-3">
               <h1 className=" font-semibold text-xl">{recipe.name}</h1>
-              <button onClick={() => saveRecipe(recipe._id)} disabled={isRecipeSaved(recipe._id)} className=' bg-red-500 text-center p-3 rounded-md text-white font-semibold text-[13px]'>{isRecipeSaved(recipe._id) ? "Saved" : "Save"}</button>
+              <button onClick={() => saveRecipe(recipe._id)}  className=' bg-red-500 text-center p-3 rounded-md text-white font-semibold text-[13px]'>Save</button>
             </div>
             <div>
               <h4 className=" text-center font-bold">Instructions:</h4>

@@ -51,7 +51,7 @@ const Home = () => {
     }
   }
 
-  const isRecipeSaved = (id) => savedRecipes.includes(id)
+  const isRecipeSaved = (id) => savedRecipes.indexOf(id)
 
   return (
     <div>

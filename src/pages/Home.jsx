@@ -51,13 +51,7 @@ const Home = () => {
     }
   }
 
-  const isRecipeSaved = (id) => {
-    try {
-      savedRecipes.indexOf(id)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const isRecipeSaved = (id) => savedRecipes.indexOf(id)
 
   return (
     <div>

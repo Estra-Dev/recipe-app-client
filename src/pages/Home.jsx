@@ -33,7 +33,7 @@ const Home = () => {
       setSavedRecipes(response.data.savedRecipes)
       console.log(response.data.savedRecipes)
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   } 
 

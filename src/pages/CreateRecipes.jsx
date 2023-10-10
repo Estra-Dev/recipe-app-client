@@ -50,7 +50,7 @@ const CreateRecipes = () => {
       const response = await axios.post(`${import.meta.env.VITE_RECIPE_API}/recipes`, recipes, {
         headers: {authorization: cookies.access_token}
       })
-      alert("recipe created")
+      alert("recipe created");
 
       navigate("/")
       console.log(response)

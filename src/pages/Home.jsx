@@ -51,7 +51,11 @@ const Home = () => {
     }
   }
 
-  const isRecipeSaved = (id) => savedRecipes.includes(id)
+  const isRecipeSaved = (id) =>  {
+    savedRecipes.map((item) => {
+      return item.inCludes(id)
+    })
+  } 
 
   return (
     <div>

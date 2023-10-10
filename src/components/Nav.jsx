@@ -17,10 +17,10 @@ const Nav = () => {
     <div className=" w-[100%] bg-black px-[1%] md:px-[5%] py-[.5%] flex justify-center items-center text-white">
       <div className=" text-left w-[20%]">
         <Link to={"/"}>
-          <h1 className=" text-white text-2xl">Recipe</h1>
+          <h1 className=" text-white text-xl">free<span className=" bg-red-500 text-2xl">Toast</span></h1>
         </Link>
       </div>
-      <div className=" w-[70%] flex justify-end gap-5 text-[12px]">
+      <div className=" w-[80%] md:w-[70%] flex justify-end gap-5 text-[10px]">
         {!cookies.access_token ? (
           <>
             <Link to={'/login'}>
@@ -30,7 +30,7 @@ const Nav = () => {
               <p>Register</p>
             </Link>
           </>
-        ) : <div className=" w-[70%] flex justify-end gap-5 text-[12px]">
+        ) : <div className=" w-[70%] flex justify-end gap-5 text-[10px]">
               <button onClick={logout}>LogOut</button>
               <div className=" flex justify-end gap-5">
                 <Link to={"/create-recipe"}>Create Recipe</Link>

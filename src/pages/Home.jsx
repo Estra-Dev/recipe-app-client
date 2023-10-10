@@ -53,7 +53,7 @@ const Home = () => {
 
   const isRecipeSaved = (id) =>  {
     savedRecipes.map((item) => {
-      return item.inCludes(id)
+      return item.includes(id)
     })
   } 
 

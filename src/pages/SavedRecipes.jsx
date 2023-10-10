@@ -24,7 +24,7 @@ const SavedRecipes = () => {
 
   return (
     <div>
-      <h1>Saved Recipes</h1>
+      <h1 className=" mt-3 font-medium text-center text-2xl">Saved Recipes</h1>
       {
         savedRecipes.map(recipe => (
           <div key={recipe._id} className=" flex flex-col items-center gap-3 w-[100%] md:w-[40%] mx-auto p-3 px-5 pt-6 bg-white border-b-2 border-solid">
